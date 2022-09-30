@@ -1,0 +1,234 @@
+:root{
+    /* Primary */
+    --Desaturated_Red: hsl(0, 36%, 70%);
+    --Soft_Red: hsl(0, 93%, 68%);
+
+    /* Neutral */
+    --Dark_Grayish_Red: hsl(0, 6%, 24%);
+}
+
+/* General
+****************************************/
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+h1{
+    color: var(--Dark_Grayish_Red);
+}
+
+p{
+    font-size: 16px;
+    color: var(--Desaturated_Red);
+}
+
+/* Header
+****************************************/
+.logo{
+    position: absolute;
+    top: 60px;
+    left: 120px;
+    width: 10%;
+}
+
+.logo img{
+    width: 100%;
+}
+
+/* Main
+****************************************/
+main{
+    display: flex;
+    flex-direction: row;
+}
+
+.col-1{
+    width: 60%;
+    background-image: url(../images/bg-pattern-desktop.svg);
+    background-repeat: repeat;
+}
+
+.col-1 .bg-i{
+    margin: 200px 120px 0;
+}
+
+.col-1 .t1{
+    color: var(--Desaturated_Red);
+    font-weight: 300;
+}
+
+
+.col-1 h1{
+    font-size: 60px;
+    font-weight: 600;
+    letter-spacing: 18px;
+}
+
+.col-1 .text{
+    margin: 100px 0 0;
+    font-size: 60px;
+    text-transform: uppercase;
+}
+
+.col-1 p{
+    line-height: 25px;
+    margin: 25px 0;
+    padding-right: 25%;
+}
+
+.col-1 form{
+    position: relative;
+    width: 80%;
+}
+
+.col-1 .child{
+    position: absolute;
+}
+
+.col-1 .email{
+    border-radius: 50px;
+    border: 1px solid var(--Desaturated_Red);
+    background-color: hsla(0, 93%, 68%, 0.010);
+    display: block;
+    left: 0;
+    top: 0;
+    padding: 15px 30px;
+    height: 50px;
+    width: 90%;
+}
+
+.col-1 .email::placeholder{
+    color: var(--Desaturated_Red);
+}
+
+.col-1 .button{
+    background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    box-shadow: 2px 5px 15px hsl(0, 80%, 86%);
+    border-radius: 50px;
+    display: block;
+    right: 0;
+    top: 0;
+    height: 50px;
+    width: 90px;
+    margin: 0;
+}
+
+.col-1 .button img{
+    margin: 15px 10px 20px 40px;
+}
+
+/* Active states */
+.col-1 .button:hover{
+    cursor: pointer;
+    background-image: linear-gradient(135deg, hsl(0, 64%, 91%), hsl(0, 68%, 85%));
+    box-shadow: 3px 7px 18px hsl(0, 32%, 72%);
+}
+
+.col-1 input:focus{
+    outline: 1px solid var(--Soft_Red);
+}
+
+/* Error */
+.col-1 .error{
+    display: none;
+}
+
+.col-1 div.error{
+    right: 100px;
+    top: 12px;
+}
+
+.col-1 p.error{
+    color: var(--Soft_Red);
+    font-size: 12px;
+    padding: 0 30px;
+    margin: 0;
+    top: 50px;
+}
+
+.col-2{
+    width: 40%;
+    height: 100vh;
+    background-image: url(../images/hero-desktop.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media screen and (max-width: 850px) {
+    .logo {
+        position: absolute;
+        top: 60px;
+        left: 50px;
+        width: 15%;
+    }
+
+    .col-1 .bg-i {
+        margin: 200px 50px 0px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    /* Header
+    ****************************************/
+    header{
+        background-image: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+        width: 100%;
+        height: 80px;
+    }
+
+    .logo{
+        top: 30px;
+        left: 40px;
+        width: 30%;
+    }
+
+    /* Main
+    ****************************************/
+    main{
+        flex-direction: column-reverse;
+    }
+
+    .col-1{
+        width: 100%;
+        background-image: none;
+        text-align: center;
+    }
+
+    .col-1 .bg-i{
+        margin: 0 40px 0;
+    }
+
+    .col-1 .text {
+        margin: 70px 0 0;
+    }
+
+    .col-1 h1 {
+        font-size: 10vw;
+    }
+
+    .col-1 p {
+        padding-right: 0;
+        font-size: 3.5vw;
+        line-height: 20px;
+        margin: 30px 0;
+    }
+
+    .col-1 form {
+        position: relative;
+        width: 100%;
+    }
+
+    .col-2{
+        width: 100%;
+        background-image: url(../images/hero-mobile.jpg);
+        height: 40vh;
+    }
+
+    /* Footer */
+    .attribution {
+        margin: 105px 0 20px;
+    }
+}
